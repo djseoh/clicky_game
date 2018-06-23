@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 import "./Title.css";
 
 
-// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
 const Title = props => (
-  <nav className="title">
+
+  <header className="title">
     <Link className="navbar-brand" to="/">
-      Clicky
+      <h1>Clicky Game</h1>
     </Link>
-  </nav>
+    <h1></h1>
+    <h1 className="score"> Score: {props.winCount} </h1>
+  </header>
 );
 
 export default Title;
